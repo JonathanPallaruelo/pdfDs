@@ -1,0 +1,152 @@
+
+
+.seccionPrincipal{
+    margin-top: 40px;
+}
+.headerContainer img,
+.footerImage img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.footerImage {
+  margin-top: 20px;
+}
+
+
+/* //Estilos para los divs de dentro  */
+
+.tablaContainer {
+    display: flex;
+    width: 100%;
+    gap: 20px; /* Opcional: separación entre las dos partes */
+}
+
+.tablaIzquierda {
+    width: 70%;
+    background-color: #16e495; /* Color de prueba para que se vea */
+    padding: 10px;
+}
+
+.tablaDerecha {
+    width: 40%;
+ 
+    padding: 10px;
+}
+
+
+/* //Estilos para la tabla */
+
+.graficoTabla {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    /* padding: 10px; */
+    height: auto;
+  
+}
+
+.fila {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.fila > div {
+    height: 20px;
+    
+    flex: 1;
+}
+
+.fila > div:first-child {
+    flex: 0.1;
+    font-weight: bold;
+    text-align: center;
+    background-color: rgb(6, 6, 77);
+   
+}
+
+/* //Estilos par al agrafica */
+.graficoTabla {
+    width: 100%;
+    height: 100%;
+    background-color: #f7f7f7;
+    width: 100%;
+}
+
+.fila {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* .columnaNumeros {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    width: 40px;
+
+    padding-left: 10px;
+} */
+
+.contenedorBarras {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    width: 100%;
+    gap: 10px; /* Espacio entre las barras */
+    position: relative;
+}
+
+.barra {
+    display: flex;
+    justify-content: flex-start;
+    position: relative;
+    text-align: center;
+}
+
+.barraColor {
+    width: 100%;
+}
+
+.ahorroTitulo {
+    
+    color: white;
+
+
+    
+}
+
+span {
+    color: white;
+    text-align: center;
+    bottom: 5px; /* Ajusta la distancia del número desde el fondo */
+    width: 100%;
+    position: absolute;
+    top: 10%;
+    left: 0%;
+    font-weight: bold;
+    font-size: 14px; /* Puedes ajustar el tamaño de la fuente */
+}
+
+/* Ajustar la sección de las imágenes */
+.imagenesDebajo {
+    display: flex;
+    justify-content: center; /* Centra las imágenes */
+    gap: 20px; /* Espacio entre las imágenes */
+
+}
+
+/* Ajustes de las imágenes */
+.imagenesDebajo img {
+    width: 50px; /* Ajusta el tamaño de las imágenes según sea necesario */
+    height: auto;
+}
+
+
+
+
+/* //Grafico vertical */
