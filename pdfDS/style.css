@@ -13,7 +13,14 @@
 .footerImage {
   margin-top: 20px;
 }
+.gris {
+    background-color: gray;
+}
 
+
+.fila2 {
+    background-color: gray;
+}
 
 /* //Estilos para los divs de dentro  */
 
@@ -150,3 +157,18 @@ span {
 
 
 /* //Grafico vertical */
+
+  .unido {
+    background-color: gray;
+    border-right: none;
+    border-left: none;
+  }
+
+  .unido:first-child {
+    border-left: 1px solid white; /* o del color del fondo general */
+  }
+
+  .unido:last-child {
+    border-right: 1px solid white;
+  }
+
