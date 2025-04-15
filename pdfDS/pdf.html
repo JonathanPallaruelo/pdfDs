@@ -143,7 +143,7 @@
                                                     style="color: BLACK; text-align: center; margin-left: -80px; margin-bottom: 10px;">
                                                     ENERGIA</H4>
                                                 <!-- Aquí está el span con la separación deseada -->
-                                                <span style="display: block; margin-top: 20px;">Tu contenido aquí</span>
+                                            
                                             </td>
                                         </tr>
 
@@ -281,7 +281,7 @@
                                     </div>
 
                                     <!-- Barra 4 -->
-                                    <div class="barra" id="BarraGay" data-value="0"
+                                    <div class="barra" id="BarraGay" data-value="34"
                                         style="width: 15%; height: 220px; border: 1px solid #087377; background-color: #ffffff; display: flex; flex-direction: column; justify-content: flex-end;">
                                         <div class="contenidoBarra"
                                             style="background-color: #087377; position: relative; transition: height 1s ease-in-out;">
@@ -331,6 +331,7 @@
                     </div>
                 </div>
 
+                <button onclick="pedirValores()">Actualizar barras</button>
 
 
 
@@ -367,43 +368,41 @@
             <script>
                 // Función para actualizar las barras
                 function actualizarBarras() {
-                    // Obtener todas las barras
                     const barras = document.querySelectorAll('.barra');
-
+            
                     barras.forEach((barra) => {
-                        // Obtener el valor de la barra desde el atributo 'data-value'
                         const valor = barra.getAttribute('data-value');
                         const contenidoBarra = barra.querySelector('.contenidoBarra');
                         const span = contenidoBarra.querySelector('span');
-
-                        // Calcular la altura proporcional de la barra en base al valor (es un porcentaje)
-                        const alturaProporcional = valor; // El valor en 'data-value' es ya un porcentaje
-
-                        // Cambiar la altura de la barra (esto será el porcentaje de la altura total)
-                        contenidoBarra.style.height = `${alturaProporcional}%`;
-
-                        // Actualizar el número que aparece dentro de la barra
+            
+                        contenidoBarra.style.height = `${valor}%`;
                         span.textContent = valor;
                     });
                 }
-
-                // Llamamos a la función inmediatamente para establecer el estado inicial
+            
+                // Llamamos a la función inicialmente
                 actualizarBarras();
-
-                // Opcional: Si quieres cambiar los valores de las barras dinámicamente, puedes hacerlo aquí
-                // Por ejemplo, con un intervalo o cuando sea necesario:
-                setInterval(() => {
-                    // Cambiar los valores de las barras de forma aleatoria
+            
+                // Función para pedir valores al usuario mediante prompt
+                function pedirValores() {
                     const barras = document.querySelectorAll('.barra');
-                    barras.forEach((barra) => {
-                        const nuevoValor = Math.floor(Math.random() * 101); // Generar un valor entre 0 y 100
+            
+                    barras.forEach((barra, index) => {
+                        let nuevoValor;
+                        do {
+                            nuevoValor = prompt(`Introduce un valor entre 0 y 100 para la barra ${index + 1}:`);
+                        } while (isNaN(nuevoValor) || nuevoValor < 0 || nuevoValor > 100);
+            
                         barra.setAttribute('data-value', nuevoValor);
                     });
-
-                    // Actualizar las barras después de cambiar los valores
+            
                     actualizarBarras();
-                }, 2000);  // Cambia el valor cada 5 segundos (ajustable)
+                }
+            
+                // Puedes llamar a esta función desde un botón, por ejemplo
+                // pedirValores(); // Descomenta esta línea si quieres que se ejecute automáticamente
             </script>
+            
 
 
 
